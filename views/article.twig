@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+{% block title %}  {{item.title}} | {{parent()}} {% endblock %} 
+{% block ariane %} {{parent()}} > <a href="/article">articles</a> > {{item.title}}{% endblock %} 
+{% block body %}	
+<section>
+	<article>
+		<h1>{{item.title}}</h1>
+		<p class="text-center"><img src="{{item.picture}}" class="img-thumbnail img-responsive" alt="article {{item.id}}"></p>
+		<p><strong>{{item.resume}}</strong></p>
+		<p>{{item.content}}</p>
+		<p>publié le {{item.published}} par {{item.author}} </p>
+		<p>tags : {% for tag in item.tags %} <a href="#">{{tag}}</a> {% endfor %}</p>
+	</article>
+</section>
+{% endblock %}
