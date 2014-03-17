@@ -1,3 +1,7 @@
+exports.getApiList = function(req, res) {
+    console.log("getApiList");
+    res.render('index', {items : apiList});
+};
 
 
 /* API Articles */
@@ -27,7 +31,11 @@ exports.getArticleById = function(req, res) {
 
 
 
-
+/* TODO : collection mongodb */
+var apiList = [
+{"type" : "article", "name" : "getArticleAll", "url" : "/api/article" },
+{"type" : "article", "name" : "getArticleById", "url" : "/api/article/1" },
+];
 
 /*
 * 	Données : todo : mise en place de mongodb
