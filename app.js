@@ -1,6 +1,5 @@
-var express = require('express'), 
-article = require('./routes/article'),
-home = require('./routes/home');
+var express = require('express')
+  , index = require('./routes');
 
 var app = express();
 var port = 3000;
@@ -17,15 +16,15 @@ app.configure(function(){
 
 
 /* Api home */
-	app.get('/', home.getApiList);
+	app.get('/', index.getApiList);
 /* Api article json  */
-	app.get('/api/article', article.getApiArticleAll);
-	app.get('/api/article/:id', article.getApiArticleById);
+	app.get('/api/article', index.getApiArticleAll);
+	app.get('/api/article/:id', index.getApiArticleById);
 
 
 /*Front*/
-	app.get('/article', article.getArticleAll);
-	app.get('/article/:id', article.getArticleById);
+	app.get('/article', index.getArticleAll);
+	app.get('/article/:id', index.getArticleById);
 
 app.listen(3000);
 console.log('localhost:3000');
