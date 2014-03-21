@@ -1,0 +1,43 @@
+{% extends "admin/layout.twig" %}
+{% block title %} ajouter un article | {{parent()}} {% endblock %} 
+{% block ariane %} {{parent()}} > <a href="/admin/article">bo articles</a>{% endblock %} 
+
+{% block body %}	
+<h1>Ajouter un article</h1>
+<form action="/admin/article/add" method="post" role="form">
+
+	<div class="form-group">
+		<input name="title" id="title" class="form-control"  type="text" value="Laborum nostrud sit eiusmod exercitation dolore">
+	</div>
+
+	<div class="form-group">
+		<textarea name="resume" id="resume" class="form-control" >Fugiat aliquip excepteur eiusmod ullamco commodo et deserunt non est minim tempor laboris. Dolor cillum duis eu laborum. </textarea>
+	</div>
+
+	<div class="form-group">
+		<textarea  class="form-control" name="content" id="content">Cupidatat pariatur pariatur ullamco ea sunt Lorem. Laborum culpa commodo consequat laborum.\r\nNon ex mollit ad deserunt laborum duis velit nulla laboris fugiat occaecat. Aliqua exercitation et excepteur velit adipisicing do qui nostrud est consequat. Non aliquip aliquip veniam eu nisi ut adipisicing irure aliquip incididunt Lorem cupidatat. Culpa cillum voluptate veniam enim do et ea exercitation deserunt.</textarea>
+	</div>
+	<div class="form-group">
+		<input name="picture" class="form-control" id="picture" type="text" value="http://lorempixel.com/g/600/350/technics/">
+	</div>
+	
+	<div class="form-group">
+		<input name="published" id="published" type="text"  class="form-control" value="09/03 08:48">
+	</div>
+
+	<div class="form-group">
+		<input name="author" id="author" type="text"  class="form-control" value="Lee Scott">
+	</div>
+	
+
+
+	<div>
+		<input type="submit" class="btn btn-primary" value="ok">
+	</div>
+</form>
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,16 @@
+{% extends "admin/layout.twig" %}
+{% block title %} Admin articles | {{parent()}} {% endblock %} 
+{% block ariane %} {{parent()}} > bo articles{% endblock %} 
+{% block body %}	
+<section>
+<p><a class="btn btn-primary" href="/admin/article/add">AJOUTER UN ARTICLE</a></p>
+
+    {% for item in articles %}
+		<blockquote>
+		  <p><a href="/article/{{item._id}}">{{item.title}}</a> <small>publié le {{item.published}} par {{item.author}} </small>  
+			  <a class="btn btn-primary"  href="/admin/article/update/{{item._id}}">update</a> <a class="btn btn-danger" href="/admin/article/delete/{{item._id}}">Delete</a> 
+		  </p>
+		</blockquote>
+    {% endfor %}
+</section>
+{% endblock %}

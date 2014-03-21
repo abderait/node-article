@@ -1,13 +1,14 @@
 {% extends "layout.twig" %}
 {% block title %} page d'accueil | {{parent()}} {% endblock %} 
 {% block body %}	
-<section>
-   <ul class="list-group">
-    {% for item in items %}
-        <li class="list-group-item">
-			{{item.type}} ::<a href="{{item.url}}">{{item.name}}</a>
-        </li>
-    {% endfor %}
-    </ul>
-</section>
+
+<ul>
+	<li><p><a href="/article">HOME ARTICLES</a></p></li>
+	<li><p><a href="/api/article">API ARTICLES</a></p></li>
+	<li><p><a href="/admin/article">ADMIN ARTICLES</a></p></li>
+</ul>
+
 {% endblock %}
+
+
+

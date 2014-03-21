@@ -5,7 +5,7 @@
 <section>
     {% for item in items %}
 		<blockquote>
-		  <p><a href="/article/{{item.id}}">{{item.title}}</a> <small>publié le {{item.published}} par {{item.author}}</small></p>
+		  <p><a href="/article/{{item._id}}">{{item.title}}</a> <small>publié le {{item.published}} par {{item.author}}</small></p>
 		</blockquote>
     {% endfor %}
 </section>
