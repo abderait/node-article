@@ -1,7 +1,7 @@
 var express = require('express')
   , index = require('./routes')
   , app = express()
-  , port = 3000;
+  , port = 8080;
 
 app.configure(function(){
     app.set('views', __dirname + '/views'); 
